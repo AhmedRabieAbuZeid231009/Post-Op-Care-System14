@@ -1,0 +1,22 @@
+POST-OP CARE — VERSION 14
+
+FRONT-END CHANGES
+1. Patient registration collects full name, email, password, sex, phone number, surgery/procedure, surgery date, and doctor invitation code.
+2. A patient cannot complete registration with an unknown invitation code.
+3. Demo doctor invitation code is AHMED123 and is displayed in the Doctor Dashboard.
+4. Successful registration creates a patient record linked to the selected doctor by doctor email.
+5. Doctor Dashboard, alerts, patient directory, reports, and message patient selector show only patients assigned to the signed-in doctor.
+6. Patient message view displays the name of the assigned doctor.
+7. Doctor-created patient records are linked to the currently signed-in doctor account.
+8. Role-specific navigation remains separate. The workspace switch control is hidden.
+
+DEMO FLOW
+1. Sign in as doctor@postopcare.com / 123456.
+2. Copy invitation code AHMED123 from Doctor Dashboard.
+3. Log out and choose Patient > Register.
+4. Complete patient details and enter AHMED123.
+5. The patient account is created and opens Patient Dashboard.
+6. Log out and sign in as the doctor again in the same browser. The new patient appears in the assigned patient list and patient reports.
+
+LIMITATION
+All data remains in browser localStorage for front-end demonstration. Different devices do not synchronize. Cross-device delivery and secure invitation validation are backend responsibilities.

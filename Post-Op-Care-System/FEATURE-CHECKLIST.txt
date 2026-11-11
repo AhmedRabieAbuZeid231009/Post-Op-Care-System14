@@ -1,0 +1,27 @@
+FUNCTIONAL CHECKLIST — VERSION 11
+
+[✓] Login patient account
+[✓] Login doctor account
+[✓] Register a new account and validate fields/password confirmation
+[✓] Optional patient Sex field during patient registration (Male / Female / Not Specified)
+[✓] Show/hide password
+[✓] All five post-login page links visible in grouped sidebar
+[✓] Cross-role screen selection opens matching demo workspace
+[✓] Patient Dashboard quick links
+[✓] Daily Check-in form, validation, reset, save history, and alert rule
+[✓] Medication dose mark/undo
+[✓] Wound photo select, preview, save, and remove
+[✓] Doctor Dashboard patient statistics and patient list
+[✓] Urgent alert modal and review actions
+[✓] Add/edit patient modal with optional Sex field and patient search
+[✓] Display patient Sex in the medical record and follow-up report
+[✓] Patient record tabs and report print action
+[✓] Notifications, role switch, and logout
+
+All information is local demo data only.
+
+[✓] Doctor account portrait shown in sidebar and top navigation
+[✓] Doctor profile card shown on doctor dashboard and patient care-team panels
+[✓] Demo patient portrait shown in patient account and patient record
+[✓] Surgical wound gallery includes full image and close-up reference image
+[✓] Patient Details wound tab shows patient-uploaded photo beside a reference photo

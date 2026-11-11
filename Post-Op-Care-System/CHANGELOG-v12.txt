@@ -1,0 +1,13 @@
+Post-Op Care V12 – Patient Sex / Gender Field Visibility Fix
+
+This update makes the optional Sex / Gender field visible in all key patient workflows:
+- Patient registration: shown after selecting Patient and Register.
+- Patient Dashboard: displays saved Sex / Gender in a Patient Information panel.
+- Patient Dashboard: Edit details lets the patient update their own Sex / Gender.
+- Doctor Add Patient and Edit Patient Details: includes the same selector.
+- Patient Details & Reports and the printable follow-up report: displays the saved value.
+- Existing demo patient records safely default to Not Specified; no saved data is erased.
+
+Options: Male, Female, Not Specified. The field is optional.
+
+This remains a front-end demonstration using browser localStorage, not a live clinical system.

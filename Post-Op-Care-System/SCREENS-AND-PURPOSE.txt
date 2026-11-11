@@ -1,0 +1,25 @@
+POST-OP CARE — REQUIRED SCREENS AND PURPOSES
+
+1. Login & Registration
+PAGE PURPOSE
+Allows patients and doctors to securely access the Post-Op Care system using their assigned account.
+
+2. Patient Dashboard
+PAGE PURPOSE
+Gives the patient a quick overview of recovery progress, recent health readings, medications, and important alerts.
+
+3. Daily Check-in
+PAGE PURPOSE
+Allows the patient to submit daily symptoms and health readings so the doctor can monitor recovery remotely.
+
+4. Medication & Wound Care
+PAGE PURPOSE
+Helps the patient review prescribed medications, track doses, and submit wound photos for follow-up.
+
+5. Doctor Dashboard
+PAGE PURPOSE
+Provides the doctor with a summary of assigned patients, urgent alerts, and cases that need follow-up.
+
+6. Patient Details & Reports
+PAGE PURPOSE
+Allows the doctor to review a patient's medical record, recovery history, wound updates, and generate a follow-up report.

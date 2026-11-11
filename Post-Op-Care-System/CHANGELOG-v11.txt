@@ -1,0 +1,10 @@
+POST-OP CARE — VERSION 11 CHANGELOG
+
+Added optional patient Sex information:
+- Patient registration: Sex selector appears only when Patient is selected; choices are Male, Female, and Not Specified.
+- Doctor Add Patient form: doctor can record the patient's Sex.
+- Edit Patient Details: doctor can update the saved Sex value.
+- Patient Details & Reports: Sex is displayed in the medical record and included in the follow-up report.
+- Existing patient records created in earlier versions are migrated to Not Specified without losing other saved information.
+
+The field is optional and does not block registration or patient creation. This remains a local-storage front-end prototype.

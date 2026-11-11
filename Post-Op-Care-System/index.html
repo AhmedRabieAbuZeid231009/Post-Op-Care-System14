@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#123f78">
+  <meta name="description" content="Post-Op Care patient recovery monitoring demo with doctor and patient workspaces."><title>Post-Op Care | Recovery Monitoring</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- SCREEN 1: Login & Registration -->
+  <section id="authView" class="auth-view">
+    <div class="auth-photo">
+      <div class="auth-photo-overlay"></div>
+      <div class="brand brand-light"><span class="brand-mark">✚</span><span>Post-Op <b>Care</b><small>RECOVERY MONITORING</small></span></div>
+      <div class="auth-photo-copy">
+        <span class="eyebrow">YOUR RECOVERY, OUR PRIORITY</span>
+        <h1>Better care.<br>Safer recovery.</h1>
+        <p>Stay connected with your doctor after surgery. Track your recovery, share health updates, and get support at every step.</p>
+      </div>
+      <div class="photo-caption"><span class="caption-dot"></span> Connected care beyond the hospital</div>
+    </div>
+    <div class="auth-side">
+      <div class="auth-topline"><span>Welcome to Post-Op Care</span><span class="secure-label">🔒 Secure access</span></div>
+      <div class="auth-card">
+        <div class="brand brand-blue"><span class="brand-mark">✚</span><span>Post-Op <b>Care</b><small>RECOVERY MONITORING</small></span></div>
+        <div class="auth-heading"><span class="eyebrow blue-eyebrow">LOGIN &amp; REGISTRATION</span><h2 id="authTitle">Welcome back!</h2><p id="authSubtitle">Allows patients and doctors to securely access the Post-Op Care system using their assigned account.</p></div>
+        <div class="role-picker" aria-label="Choose account type">
+          <button class="role-choice" type="button" data-role="patient"><span class="role-symbol">♙</span><span><b>Patient</b><small>My recovery</small></span></button>
+          <button class="role-choice active" type="button" data-role="doctor"><span class="role-symbol">⚕</span><span><b>Doctor</b><small>Care workspace</small></span></button>
+        </div>
+        <div class="auth-tabs"><button type="button" id="loginTab" class="active">Login</button><button type="button" id="registerTab">Register</button></div>
+        <form id="authForm" novalidate>
+          <div class="field" id="nameField" hidden><label for="authName">Full name</label><input id="authName" type="text" autocomplete="name" placeholder="Enter your full name"></div>
+          <div class="field" id="sexField" hidden><label for="patientSex">Sex / Gender <span class="muted">(optional)</span></label><select id="patientSex"><option value="Not Specified" selected>Not Specified</option><option value="Male">Male</option><option value="Female">Female</option></select></div>
+          <div class="field" id="phoneField" hidden><label for="patientPhone">Phone number</label><input id="patientPhone" type="tel" autocomplete="tel" placeholder="Enter your phone number"></div>
+          <div class="field" id="procedureField" hidden><label for="patientProcedure">Surgery / Procedure</label><input id="patientProcedure" type="text" placeholder="e.g. Appendectomy"></div>
+          <div class="field" id="surgeryDateField" hidden><label for="patientSurgeryDate">Surgery date</label><input id="patientSurgeryDate" type="date"></div>
+          <div class="field" id="doctorCodeField" hidden><label for="doctorInviteCode">Doctor invitation code</label><input id="doctorInviteCode" type="text" autocomplete="off" placeholder="Enter the code provided by your doctor"><small class="muted">Ask your treating doctor for their personal invitation code.</small></div>
+          <div class="field"><label for="authEmail">Email address</label><input id="authEmail" type="email" autocomplete="username" placeholder="name@example.com" required></div>
+          <div class="field"><label for="authPassword">Password</label><div class="password-field"><input id="authPassword" type="password" autocomplete="current-password" placeholder="Enter your password" required><button id="togglePassword" type="button" aria-label="Show password">Show</button></div></div>
+          <div class="field" id="confirmField" hidden><label for="confirmPassword">Confirm password</label><input id="confirmPassword" type="password" autocomplete="new-password" placeholder="Re-enter your password"></div>
+          <div class="auth-row" id="rememberRow"><label class="check-label"><input type="checkbox" id="rememberMe" checked> Remember me</label><button type="button" class="link-button" id="forgotButton">Forgot password?</button></div>
+          <button class="btn btn-primary btn-block" type="submit" id="authSubmit">Login <span>→</span></button>
+          <p id="authMessage" class="form-message" aria-live="polite"></p>
+        </form>
+        <div class="demo-access"><b>Demo accounts</b><div><span>Patient</span><code>patient@postopcare.com</code><code>123456</code></div><div><span>Doctor</span><code>doctor@postopcare.com</code><code>123456</code></div></div>
+        <p class="auth-footnote">Prototype access: demo information is stored locally in this browser.</p>
+      </div>
+      <div class="copyright">© 2026 Post-Op Care · Recovery support after surgery</div>
+    </div>
+  </section>
+
+  <!-- APPLICATION WORKSPACE -->
+  <section id="appView" class="app-view" hidden>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand brand-light side-brand"><span class="brand-mark">✚</span><span>Post-Op <b>Care</b><small>RECOVERY MONITORING</small></span></div>
+      <div class="side-profile"><div class="user-avatar" id="sideAvatar">DR</div><div class="side-profile-copy"><b id="sideName">Dr. Ahmed Rabie</b><small id="sideRole">Doctor</small></div><span class="online-dot"></span></div>
+      <div class="nav-caption">WORKSPACE</div>
+      <nav id="sideNav" class="side-nav" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom"><div class="support-card"><span>♡</span><b>Care beyond surgery</b><small>Recovery is a journey. We are with you.</small></div><button type="button" class="logout-button" id="logoutButton"><span>↪</span> Log out</button></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button type="button" class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><span>Post-Op Care</span><span class="crumb-sep">/</span><b id="breadcrumbTitle">Patient Dashboard</b></div>
+        <div class="topbar-actions">
+          <button type="button" class="notification-button" id="notificationButton" aria-label="Open alerts"><span>♧</span><i id="notificationCount" class="notification-count">2</i></button>
+          <div class="top-user"><div class="user-avatar small" id="topAvatar">DR</div><span id="topName">Dr. Ahmed Rabie</span><span class="chevron">⌄</span></div>
+          <button type="button" class="workspace-switch" id="switchRoleButton" title="Switch between the doctor and patient demo workspaces" hidden>Patient demo view</button>
+        </div>
+      </header>
+      <main id="pageContent" class="page-content" tabindex="-1"></main>
+    </div>
+  </section>
+
+  <div id="modalRoot"></div>
+  <script src="app.js"></script>
+</body>
+</html>

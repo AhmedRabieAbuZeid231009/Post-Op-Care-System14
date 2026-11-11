@@ -1,0 +1,29 @@
+POST-OP CARE V13 — SEPARATE ROLE WORKSPACES, MESSAGING & PROGRESS CLARITY
+
+1. Role separation
+- Patient login opens only the Patient Workspace navigation.
+- Doctor login opens only the Doctor Workspace navigation.
+- A patient cannot navigate into doctor pages, and a doctor cannot navigate into patient pages.
+- The cross-role demo switch is hidden.
+- Public registration creates patient accounts only. Doctor accounts are provisioned by an administrator/system owner; doctors sign in with assigned credentials.
+
+2. Patient-doctor communication
+- Added a Messages screen to both workspaces.
+- Patients can send a message to their assigned doctor.
+- Doctors can choose a patient and reply in that patient's conversation.
+- Messages are timestamped and saved in browser localStorage for this front-end demonstration.
+- This is not real-time communication and does not transmit to another device/browser or a hospital.
+
+3. Recovery percentage explanation
+- Clarified that the percentage means follow-up care-plan completion, not biological healing, a probability of recovery, or a prediction of recovery time.
+- Added a clinician-facing explanation with example milestone weights: check-ins 25%, medication tracking 25%, wound updates 25%, and follow-up/review 25%.
+- These weights are examples only; clinicians should set procedure-specific milestones and weights.
+- A normal check-in no longer automatically increases the percentage. Initial sample percentages remain illustrative and must be clinician-reviewed.
+- The doctor can update the care-plan completion value in the patient record.
+
+DEMO ACCOUNTS
+Doctor: doctor@postopcare.com / 123456
+Patient: patient@postopcare.com / 123456
+
+IMPORTANT
+This remains an academic front-end prototype. Data, including messages, stays in the current browser's localStorage. It is not secure, not connected across devices, and must not be used for real clinical communication or patient care.
